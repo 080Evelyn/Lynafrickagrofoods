@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import DistributorButton from "./ui/distributor-button";
 
@@ -14,7 +14,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 max-md:px-2 bg-white/20 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 w-full max-w-[1600px] z-50 max-md:px-2 bg-white/20 backdrop-blur-md shadow-sm">
       <div className="flex justify-between items-center px-4 py-3 md:px-8">
         {/* Logo */}
         <img src="/logo.svg" alt="Logo" className="w-8 h-8 md:w-10 md:h-10" />

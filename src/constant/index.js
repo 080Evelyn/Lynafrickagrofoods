@@ -1,3 +1,12 @@
+import {
+  Factory,
+  HeartPulse,
+  Leaf,
+  Package,
+  ShieldCheck,
+  Users2,
+} from "lucide-react";
+
 export const testimonials = [
   {
     id: 1,
@@ -61,5 +70,61 @@ export const socialMedia = [
     icon: "/images/tiktok.svg",
     url: "https://www.tiktok.com/@miala_beauty",
     color: "hover:bg-black",
+  },
+];
+
+export const benefits = [
+  {
+    title: "100% Natural Ingredients",
+    icon: Leaf,
+    description:
+      "Made purely from real farm produce with no additives or preservatives.",
+  },
+  {
+    title: "No Preservatives",
+    icon: ShieldCheck,
+    description:
+      "Zero chemicals. Every batch is processed clean and safe for your family.",
+  },
+  {
+    title: "Locally Produced",
+    icon: Factory,
+    description:
+      "Sourced from local farmers and processed within regulated facilities.",
+  },
+  {
+    title: "Hygienic Processing",
+    icon: Package,
+    description:
+      "Handled with high hygiene standards from milling to packaging.",
+  },
+  {
+    title: "High Nutrient Content",
+    icon: HeartPulse,
+    description:
+      "Rich in vitamins, fiber and energy—perfect for healthy living.",
+  },
+  {
+    title: "Suitable for All Ages",
+    icon: Users2,
+    description:
+      "Great for kids, adults, the elderly and people with dietary requirements.",
+  },
+];
+
+export const products = [
+  {
+    img: "/images/rice-cassava.png",
+    alt: "Lynafrick Flour Classic",
+    title: "Lynafrick Flour Classic",
+    subtitle: "Rice + Cassava",
+    desc: "A perfect blend of rice and cassava for smooth, tasty swallow meals. 100% natural, light, and easy to enjoy with any Nigerian soup. Healthy and family-friendly.",
+  },
+  {
+    img: "/images/millet-plantain.png",
+    alt: "Lynafrick Flour Balance",
+    title: "Lynafrick Flour Balance",
+    subtitle: "Millet + Plantain",
+    desc: "Crafted for diabetic-friendly meals. High in fibre, helps regulate blood sugar, and packed with natural energy. Ideal for healthy, everyday swallow.",
   },
 ];

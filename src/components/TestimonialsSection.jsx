@@ -2,6 +2,9 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { testimonials } from "@/constant";
 import { StarIcon } from "lucide-react";
 
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 const Testimonial = () => (
   <section
     id="testimonials"
@@ -16,10 +19,14 @@ const Testimonial = () => (
       </p>
       <div className="mt-8 sm:mt-14 w-full max-w-(--breakpoint-xl) mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-hidden border-r border-background">
-          {testimonials.map((testimonial) => (
-            <div
+          {testimonials.map((testimonial, i) => (
+            <motion.div
               key={testimonial.id}
               className="flex flex-col outline-solid outline-1 outline-border px-6 py-8"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
             >
               <div className="flex items-center justify-center gap-2">
                 <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
@@ -28,9 +35,11 @@ const Testimonial = () => (
                 <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
                 <StarIcon className="w-6 h-6 fill-yellow-500 stroke-yellow-500" />
               </div>
+
               <p className="my-6 text-[17px] text-center max-w-md">
                 &quot;{testimonial.testimonial}&quot;
               </p>
+
               <div className="mt-auto flex items-center justify-center gap-3">
                 <Avatar className="size-9">
                   <AvatarFallback className="text-xl font-medium bg-primary text-primary-foreground">
@@ -44,7 +53,7 @@ const Testimonial = () => (
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
