@@ -107,6 +107,9 @@
 /*---break---*/
 
 :root {
+  max-width: 1600px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

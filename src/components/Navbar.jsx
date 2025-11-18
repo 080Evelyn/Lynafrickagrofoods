@@ -1,19 +1,20 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import DistributorButton from "./ui/distributor-button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { to: "/", label: "Home" },
-    { to: "/products", label: "Products" },
-    { to: "/about", label: "About Us" },
-    { to: "/contact", label: "Contact Us" },
+    { to: "#home", label: "Home" },
+    { to: "#products", label: "Products" },
+    { to: "#about", label: "About Us" },
+    { to: "#testimonials", label: "Testimonials" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 max-md:px-2 bg-white/20 backdrop-blur-md shadow-md">
+    <nav className="fixed top-0 w-full max-w-[1600px] z-50 max-md:px-2 bg-white/20 backdrop-blur-md shadow-sm">
       <div className="flex justify-between items-center px-4 py-3 md:px-8">
         {/* Logo */}
         <img src="/logo.svg" alt="Logo" className="w-8 h-8 md:w-10 md:h-10" />
@@ -22,27 +23,28 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-8 items-center text-gray-800">
           {links.map((link, index) => (
             <li key={index}>
-              <NavLink
-                to={link.to}
+              <a
+                href={link.to}
                 className="hover:text-green-600 transition-colors"
               >
                 {link.label}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>
 
         {/* Desktop CTAs */}
         <div className="hidden md:flex gap-4">
-          <Button className="bg-green-600 hover:bg-green-700 text-white">
-            Shop Now
-          </Button>
-          <Button
-            variant="outline"
-            className="px-6 py-3 rounded-md border-lime-700 text-lime-700 hover:bg-lime-50"
+          <a
+            href="#products"
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "bg-lime-700 hover:bg-lime-800 text-white"
+            )}
           >
-            Become a Distributor
-          </Button>
+            Shop Now
+          </a>
+          <DistributorButton />
         </div>
 
         {/* Mobile Hamburger */}
@@ -77,30 +79,28 @@ export default function Navbar() {
         <ul className="flex flex-col gap-4 items-center py-4 text-gray-800">
           {links.map((link, index) => (
             <li key={index}>
-              <NavLink
-                to={link.to}
+              <a
+                href={link.to}
                 className="hover:text-green-600"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </NavLink>
+              </a>
             </li>
           ))}
 
           <li className="flex gap-4 mt-4">
-            <Button
-              className="bg-green-600 hover:bg-green-700 text-white"
+            <a
+              href="#products"
+              className={cn(
+                buttonVariants({ variant: "default" }),
+                "bg-lime-700 hover:bg-lime-800 text-white"
+              )}
               onClick={() => setIsOpen(false)}
             >
               Shop Now
-            </Button>
-            <Button
-              variant="outline"
-              className="px-6 py-3 rounded-md border-lime-700 text-lime-700 hover:bg-lime-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Become a Distributor
-            </Button>
+            </a>
+            <DistributorButton />
           </li>
         </ul>
       </div>

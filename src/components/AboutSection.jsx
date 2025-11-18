@@ -1,18 +1,43 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+
 const AboutSection = () => {
   return (
-    <section className="w-full py-20 bg-white">
+    <section id="about" className="w-full py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
         {/* Image */}
-        <div className="w-full lg:w-1/2">
+        <motion.div
+          className="w-full lg:w-1/2"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+            delay: 0.3,
+          }}
+        >
           <img
             src="/images/farming.jpg"
             alt="Farm"
             className="w-full rounded-2xl object-cover shadow-sm"
           />
-        </div>
+        </motion.div>
 
         {/* Text Content */}
-        <div className="w-full lg:w-1/2">
+        <motion.div
+          className="w-full lg:w-1/2"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 12,
+            delay: 0.6,
+          }}
+        >
           <h2 className="text-4xl font-bold mb-6">
             About Lynafrick Agro Foods
           </h2>
@@ -37,7 +62,7 @@ const AboutSection = () => {
             our mission is simple: bring farm-fresh nourishment straight to your
             kitchen.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
