@@ -1,0 +1,109 @@
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/products", label: "Products" },
+    { to: "/about", label: "About Us" },
+    { to: "/contact", label: "Contact Us" },
+  ];
+
+  return (
+    <nav className="sticky top-0 z-50 max-md:px-2 bg-white/20 backdrop-blur-md shadow-md">
+      <div className="flex justify-between items-center px-4 py-3 md:px-8">
+        {/* Logo */}
+        <img src="/logo.svg" alt="Logo" className="w-8 h-8 md:w-10 md:h-10" />
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-8 items-center text-gray-800">
+          {links.map((link, index) => (
+            <li key={index}>
+              <NavLink
+                to={link.to}
+                className="hover:text-green-600 transition-colors"
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop CTAs */}
+        <div className="hidden md:flex gap-4">
+          <Button className="bg-green-600 hover:bg-green-700 text-white">
+            Shop Now
+          </Button>
+          <Button
+            variant="outline"
+            className="px-6 py-3 rounded-md border-lime-700 text-lime-700 hover:bg-lime-50"
+          >
+            Become a Distributor
+          </Button>
+        </div>
+
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden focus:outline-none w-6 h-6 flex flex-col justify-center items-center"
+        >
+          <span
+            className={`block w-5 h-0.5 bg-gray-800 transition-all duration-300 ${
+              isOpen ? "rotate-45 translate-y-0.5" : "-translate-y-1"
+            }`}
+          ></span>
+          <span
+            className={`block w-5 h-0.5 bg-gray-800 transition-all duration-300 ${
+              isOpen ? "opacity-0" : "opacity-100"
+            }`}
+          ></span>
+          <span
+            className={`block w-5 h-0.5 bg-gray-800 transition-all duration-300 ${
+              isOpen ? "-rotate-45 -translate-y-0.5" : "translate-y-1"
+            }`}
+          ></span>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden bg-white/20 backdrop-blur-md shadow-md transition-all duration-300 ${
+          isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+        }`}
+      >
+        <ul className="flex flex-col gap-4 items-center py-4 text-gray-800">
+          {links.map((link, index) => (
+            <li key={index}>
+              <NavLink
+                to={link.to}
+                className="hover:text-green-600"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
+
+          <li className="flex gap-4 mt-4">
+            <Button
+              className="bg-green-600 hover:bg-green-700 text-white"
+              onClick={() => setIsOpen(false)}
+            >
+              Shop Now
+            </Button>
+            <Button
+              variant="outline"
+              className="px-6 py-3 rounded-md border-lime-700 text-lime-700 hover:bg-lime-50"
+              onClick={() => setIsOpen(false)}
+            >
+              Become a Distributor
+            </Button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+}
