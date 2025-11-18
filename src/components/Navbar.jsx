@@ -1,19 +1,18 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { to: "/", label: "Home" },
-    { to: "/products", label: "Products" },
-    { to: "/about", label: "About Us" },
-    { to: "/contact", label: "Contact Us" },
+    { to: "#home", label: "Home" },
+    { to: "#products", label: "Products" },
+    { to: "#about", label: "About Us" },
+    { to: "#testimonials", label: "Testimonials" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 max-md:px-2 bg-white/20 backdrop-blur-md shadow-md">
+    <nav className="sticky top-0 z-50 max-md:px-2 bg-white/20 backdrop-blur-md shadow-sm">
       <div className="flex justify-between items-center px-4 py-3 md:px-8">
         {/* Logo */}
         <img src="/logo.svg" alt="Logo" className="w-8 h-8 md:w-10 md:h-10" />
@@ -22,12 +21,12 @@ export default function Navbar() {
         <ul className="hidden md:flex gap-8 items-center text-gray-800">
           {links.map((link, index) => (
             <li key={index}>
-              <NavLink
-                to={link.to}
+              <a
+                href={link.to}
                 className="hover:text-green-600 transition-colors"
               >
                 {link.label}
-              </NavLink>
+              </a>
             </li>
           ))}
         </ul>
@@ -77,13 +76,13 @@ export default function Navbar() {
         <ul className="flex flex-col gap-4 items-center py-4 text-gray-800">
           {links.map((link, index) => (
             <li key={index}>
-              <NavLink
-                to={link.to}
+              <a
+                href={link.to}
                 className="hover:text-green-600"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
-              </NavLink>
+              </a>
             </li>
           ))}
 

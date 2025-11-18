@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="w-full px-6 py-20 md:py-28">
+    <section id="home" className="w-full px-6 py-15 md:py-20 2xl:py-28">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* left */}
         <div className="space-y-6">

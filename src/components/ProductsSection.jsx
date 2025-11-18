@@ -7,19 +7,19 @@ export default function ProductsSection() {
       alt: "Lynafrick Flour Classic",
       title: "Lynafrick Flour Classic",
       subtitle: "Rice + Cassava",
-      desc: "A smooth and versatile blend perfect for swallow, baking, and everyday meals. Mild taste, easy to digest, suitable for all ages.",
+      desc: "A perfect blend of rice and cassava for smooth, tasty swallow meals. 100% natural, light, and easy to enjoy with any Nigerian soup. Healthy and family-friendly.",
     },
     {
       img: "/images/millet-plantain.png",
       alt: "Lynafrick Flour Balance",
       title: "Lynafrick Flour Balance",
       subtitle: "Millet + Plantain",
-      desc: "A nutrient-rich flour blend designed for healthy living. High in fibre and energy, great for swallow, porridge, and wholesome meals.",
+      desc: "Crafted for diabetic-friendly meals. High in fibre, helps regulate blood sugar, and packed with natural energy. Ideal for healthy, everyday swallow.",
     },
   ];
 
   return (
-    <section className="w-full px-6 py-16 bg-gray-50">
+    <section id="products" className="w-full px-6 py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         {/* SECTION HEADER */}
         <div className="text-center mb-12">

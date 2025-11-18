@@ -13,17 +13,17 @@ const Footer = () => {
     {
       name: "Address",
       icon: <MapPin />,
-      content: "Aiye Bus stop, 58 Osolo Way, Oshodi, Isolo, Lagos",
+      content: "1, Alhaji Adenekan Street College Bustop Okota Lagos",
     },
     {
       name: "Phone",
       icon: <Phone />,
-      content: "+234 916 130 2009",
+      content: "+234 9033113048",
     },
     {
       name: "Email",
       icon: <Mail />,
-      content: "info@lynafrick.com",
+      content: "lynafrickagrofoods@gmail.com",
     },
   ];
 
