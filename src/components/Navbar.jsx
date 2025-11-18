@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import DistributorButton from "./ui/distributor-button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,15 +35,16 @@ export default function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden md:flex gap-4">
-          <Button className="bg-green-600 hover:bg-green-700 text-white">
-            Shop Now
-          </Button>
-          <Button
-            variant="outline"
-            className="px-6 py-3 rounded-md border-lime-700 text-lime-700 hover:bg-lime-50"
+          <a
+            href="#products"
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "bg-lime-700 hover:bg-lime-800 text-white"
+            )}
           >
-            Become a Distributor
-          </Button>
+            Shop Now
+          </a>
+          <DistributorButton />
         </div>
 
         {/* Mobile Hamburger */}
@@ -87,19 +90,17 @@ export default function Navbar() {
           ))}
 
           <li className="flex gap-4 mt-4">
-            <Button
-              className="bg-green-600 hover:bg-green-700 text-white"
+            <a
+              href="#products"
+              className={cn(
+                buttonVariants({ variant: "default" }),
+                "bg-lime-700 hover:bg-lime-800 text-white"
+              )}
               onClick={() => setIsOpen(false)}
             >
               Shop Now
-            </Button>
-            <Button
-              variant="outline"
-              className="px-6 py-3 rounded-md border-lime-700 text-lime-700 hover:bg-lime-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Become a Distributor
-            </Button>
+            </a>
+            <DistributorButton />
           </li>
         </ul>
       </div>

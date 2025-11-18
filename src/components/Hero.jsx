@@ -1,4 +1,6 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import DistributorButton from "./ui/distributor-button";
+import { cn } from "@/lib/utils";
 
 export default function Hero() {
   return (
@@ -19,16 +21,17 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 mt-4">
-            <Button className="bg-lime-700 hover:bg-lime-800 text-white px-6 py-3 rounded-md">
-              Shop Now
-            </Button>
-
-            <Button
-              variant="outline"
-              className="px-6 py-3 rounded-md border-lime-700 text-lime-700 hover:bg-lime-50"
+            <a
+              href="#products"
+              target="_self"
+              className={cn(
+                buttonVariants({ variant: "default" }),
+                "bg-lime-700 hover:bg-lime-800 text-white"
+              )}
             >
-              Become a Distributor
-            </Button>
+              Shop Now
+            </a>
+            <DistributorButton />
           </div>
         </div>
 

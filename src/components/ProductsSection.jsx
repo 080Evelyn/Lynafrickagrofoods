@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ShoppingBag } from "lucide-react";
 
 export default function ProductsSection() {
   const products = [
@@ -59,7 +60,17 @@ export default function ProductsSection() {
               </p>
 
               <div className="mt-6">
-                <Button className="w-full bg-lime-700 hover:bg-lime-800 text-white py-3 rounded-md">
+                <Button
+                  className="w-full bg-lime-700 hover:bg-lime-800 text-white py-3 rounded-md"
+                  onClick={() => {
+                    const message = `Hello, I would like to order the ${product.title}.`;
+                    const url = `https://api.whatsapp.com/send/?phone=2349059296155&text=${encodeURIComponent(
+                      message
+                    )}`;
+                    window.open(url, "_blank");
+                  }}
+                >
+                  <ShoppingBag className="mr-2" />
                   Order now
                 </Button>
               </div>
