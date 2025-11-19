@@ -15,7 +15,7 @@ const AboutSection = () => {
             type: "spring",
             stiffness: 260,
             damping: 20,
-            delay: 0.3,
+            delay: 0.5,
           }}
         >
           <img
@@ -35,7 +35,7 @@ const AboutSection = () => {
             type: "spring",
             stiffness: 120,
             damping: 12,
-            delay: 0.6,
+            delay: 0.8,
           }}
         >
           <h2 className="text-4xl font-bold mb-6">
