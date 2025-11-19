@@ -23,7 +23,7 @@ const Footer = () => {
     {
       name: "Email",
       icon: <Mail />,
-      content: "lynafrickagrofoods@gmail.com",
+      content: "info@lynafrickagrofoods.com.ng",
     },
   ];
 
@@ -33,9 +33,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#home">
-              <img src="/logo.svg" alt="Lynafrick Agro Foods" />
-            </a>
+            <div className="flex items-center gap-3">
+              <img src="/logo.svg" alt="Logo" className="size-7.5 md:size-9" />
+              <span className="font-medium tracking-tighter text-2xl text-muted">
+                Lynafrick
+                <span className="text-[#00d094] text-base align-baseline ms-2">
+                  Agro Foods
+                </span>
+              </span>
+            </div>
             <p className="text-gray-300 mt-3 mb-6 leading-relaxed">
               Lynafrick Agro Foods produces nutritious flour directly from farm
               produce. Our premium, organic flours are natural, healthy, and
@@ -110,6 +116,7 @@ const Footer = () => {
             <div className="flex items-center space-x-6 text-sm">
               <div className="flex items-center space-x-2 text-gray-400">
                 <div className="flex space-x-1">
+                  <p>Developed by Lynog Tech Nig LTD</p>
                   <svg
                     className="w-5 h-5"
                     fill="currentColor"
