@@ -56,20 +56,20 @@ export const socialMedia = [
   {
     name: "Instagram",
     icon: "/images/instagram.svg",
-    url: "https://www.instagram.com/miala_beauty/",
+    url: "https://www.instagram.com/p/DK67FYxvVPt/",
     color: "hover:bg-pink-600",
   },
   {
     name: "Facebook",
     icon: "/images/facebook.svg",
-    url: "https://www.facebook.com/mialabeauty/",
+    url: "https://www.facebook.com/p/Lynafrick-Store-61552655501534/",
     color: "hover:bg-blue-600",
   },
   {
-    name: "TikTok",
-    icon: "/images/tiktok.svg",
-    url: "https://www.tiktok.com/@miala_beauty",
-    color: "hover:bg-black",
+    name: "Twitter",
+    icon: "/images/twitter.png",
+    url: "https://x.com/lynafrick56531",
+    color: "hover:bg-[#1c96e8]",
   },
 ];
 

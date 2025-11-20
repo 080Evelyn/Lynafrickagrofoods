@@ -33,15 +33,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3">
-              <img src="/logo.svg" alt="Logo" className="size-7.5 md:size-9" />
-              <span className="font-medium tracking-tighter text-2xl text-muted">
-                Lynafrick
-                <span className="text-[#00d094] text-base align-baseline ms-2">
-                  Agro Foods
-                </span>
-              </span>
-            </div>
+            <img
+              src="/lynafrick-logo.png"
+              alt="Logo"
+              className="w-full max-w-40 "
+            />
             <p className="text-gray-300 mt-3 mb-6 leading-relaxed">
               Lynafrick Agro Foods produces nutritious flour directly from farm
               produce. Our premium, organic flours are natural, healthy, and
@@ -55,7 +51,7 @@ const Footer = () => {
                   href={platform.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center transition-all duration-300 transform hover:border border-gray-500 hover:scale-110`}
+                  className={`w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center ${platform.color} transition-all duration-300 transform hover:border border-gray-500  hover:scale-110`}
                   aria-label={`Follow us on ${platform.name}`}
                 >
                   <img
