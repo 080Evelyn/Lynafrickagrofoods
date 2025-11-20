@@ -114,14 +114,14 @@ export const benefits = [
 
 export const products = [
   {
-    img: "/images/rice-cassava.png",
+    img: "/images/rice-cassava.webp",
     alt: "Lynafrick Flour Classic",
     title: "Lynafrick Flour Classic",
     subtitle: "Rice + Cassava",
     desc: "A perfect blend of rice and cassava for smooth, tasty swallow meals. 100% natural, light, and easy to enjoy with any Nigerian soup. Healthy and family-friendly.",
   },
   {
-    img: "/images/millet-plantain.png",
+    img: "/images/millet-plantain.webp",
     alt: "Lynafrick Flour Balance",
     title: "Lynafrick Flour Balance",
     subtitle: "Millet + Plantain",
