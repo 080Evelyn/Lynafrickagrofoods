@@ -17,7 +17,15 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full max-w-[1600px] z-50 max-md:px-2 bg-white/20 backdrop-blur-md shadow-sm">
       <div className="flex justify-between items-center px-4 py-3 md:px-8">
         {/* Logo */}
-        <img src="/lynafrick-logo.png" alt="Logo" className="w-full max-w-29" />
+        <div className="flex items-center gap-3">
+          <img src="/logo.svg" alt="Logo" className="size-7.5 md:size-9" />
+          <span className="font-medium tracking-tighter text-2xl text-gray-600">
+            Lynafrick
+            <span className="text-[#00d094] text-base align-baseline ms-2">
+              Agro Foods
+            </span>
+          </span>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 items-center text-gray-800">
