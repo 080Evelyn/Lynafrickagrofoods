@@ -89,7 +89,7 @@ export default function Hero() {
         >
           <div className="w-[80%] max-w-sm md:max-w-md">
             <motion.img
-              src="/images/hero.png"
+              src="/images/hero.webp"
               alt="Lynafrick Flour Packaging"
               className="w-full max-w-xs lg:max-w-md rounded-xl object-cover"
               variants={imageVariants}

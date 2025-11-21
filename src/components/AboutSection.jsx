@@ -19,7 +19,7 @@ const AboutSection = () => {
           }}
         >
           <img
-            src="/images/farming.jpg"
+            src="/images/farming.webp"
             alt="Farm"
             className="w-full rounded-2xl object-cover shadow-sm"
           />
