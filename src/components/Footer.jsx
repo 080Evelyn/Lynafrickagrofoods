@@ -112,7 +112,7 @@ const Footer = () => {
             <div className="flex items-center space-x-6 text-sm">
               <div className="flex items-center space-x-2 text-gray-400">
                 <div className="flex space-x-1">
-                  <p>Developed by Lynog Tech Nig LTD</p>
+                  <p className="capitalize">Developed by Lynog Tech Nig LTD</p>
                   <svg
                     className="w-5 h-5"
                     fill="currentColor"
