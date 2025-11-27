@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { benefits } from "@/constant";
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function BenefitsSection() {
   return (

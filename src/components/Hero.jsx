@@ -2,7 +2,7 @@ import { buttonVariants } from "@/components/ui/button";
 import DistributorButton from "./ui/distributor-button";
 import { cn } from "@/lib/utils";
 // eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Hero() {
   const containerVariants = {
