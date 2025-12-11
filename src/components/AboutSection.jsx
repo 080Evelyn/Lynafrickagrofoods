@@ -35,7 +35,7 @@ const AboutSection = () => {
             type: "spring",
             stiffness: 120,
             damping: 12,
-            delay: 0.8,
+            delay: 0.5,
           }}
         >
           <h2 className="text-4xl font-bold mb-6">
